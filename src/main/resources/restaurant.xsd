@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://omthacker.com/webservice-example" xmlns:tns="http://omthacker.com/webservice-example" elementFormDefault="qualified">
+
+    <element name="GetRestaurantRequest" type="tns:GetRestaurantRequest"></element>
+    
+    <complexType name="GetRestaurantRequest">
+    	<sequence>
+    		<element name="restaurantId" type="int"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="GetRestaurantResponse"
+    	type="tns:GetRestaurantResponse">
+    </element>
+    
+    <complexType name="GetRestaurantResponse">
+    	<sequence>
+			<element name="RestaurantDetails" type="tns:RestaurantDetails">
+			</element>
+    	</sequence>
+    </complexType>
+
+	<complexType name="RestaurantDetails">
+		<sequence>
+			<element name="restaurantId" type="int"></element>
+			<element name="restaurantName" type="string"></element>
+			<element name="locationId" type="int"></element>
+			<element name="location" type="string"></element>
+			<element name="pincode" type="string"></element>
+			<element name="status" type="string"></element>
+			<element name="restaurantType" type="string"></element>
+			<element name="cusine" type="string"></element>
+		</sequence>
+	</complexType>
+</schema>
